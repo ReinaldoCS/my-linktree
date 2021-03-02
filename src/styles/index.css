@@ -1,14 +1,21 @@
 body {
-    height: 100vh;
-    
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, #2D796D 0%, rgba(0, 68, 69, 0) 99.99%, rgba(0, 68, 69, 0) 100%), #004445;
 }
 
-body > img {
+.container {
+    height: 100vh;
+    max-width: 400px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .profile  img {
     width: 220px;
     height: 220px;
 
@@ -19,11 +26,16 @@ body > img {
 
 }
 
-body > p {
-    font-family: 'Inter', sans-serif;
+.container > p {
+    font-family: Inter;
+    font-style: italic;
     font-weight: 600;
-
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
     color: white;
+
+    margin-top: 20px;
 }
 
 
@@ -37,7 +49,7 @@ body > p {
 
 }
 
-.buttons button {
+.buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,28 +63,34 @@ body > p {
 
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    text-decoration: none;
 
     color: white;
     cursor: pointer;
-    /* background-color: red; */
 }
 
-.buttons button img {
+.buttons a:hover {  
+    color: #FFF;
+    filter: brightness(90%)
+}
+
+
+.buttons a .icon {
     width: 20px;
     height: 20px;
     padding-right: 10px;
 }
 
-.buttons .githubButton {
+
+.buttons .buttonGithub {
     background-color: #24292E;
-
 }
 
-.buttons .instagramButton {
-    background: linear-gradient(268.53deg, #405DE6 0%, #5851DB 21.35%, #833AB4 41.67%, #C13584 58.85%, #E1306C 79.17%, #FD1D1D 100%);
+.buttons .buttonInstagram {
+    background-image: linear-gradient(-135deg,#1400c8,#b900b4,#f50000) 
 }
 
-.buttons .LinkedInButton {
+.buttons .buttonLinkedIn {
     background-color: #095CAF;
-
+    
 }
